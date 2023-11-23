@@ -1,5 +1,5 @@
-<h1>App</h1>
+<script>
+  import ThemeToggle from './components/ThemeToggle.svelte';
+</script>
 
-<style>
-
-</style>
+<ThemeToggle />
