@@ -23,11 +23,10 @@ export function setThemeStyle(theme: Theme) {
   }
 }
 
-export const MATCH_MEDIA_PREFERS_COLOR_SCHEME = '(prefers-color-scheme: dark)';
+export const prefersColorSchemeMatchMedia = window.matchMedia(
+  '(prefers-color-scheme: dark)',
+);
 
 export function getSystemTheme(): Theme {
-  return window.matchMedia &&
-    window.matchMedia(MATCH_MEDIA_PREFERS_COLOR_SCHEME).matches
-    ? 'DARK'
-    : 'LIGHT';
+  return prefersColorSchemeMatchMedia.matches ? 'DARK' : 'LIGHT';
 }

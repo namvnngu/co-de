@@ -10,7 +10,7 @@
     getSystemTheme,
     getLocalStorageTheme,
     setLocalStorageTheme,
-    MATCH_MEDIA_PREFERS_COLOR_SCHEME,
+    prefersColorSchemeMatchMedia,
   } from '@/utils/theme';
 
   // VALUES
@@ -45,15 +45,17 @@
         setThemeStyle(newTheme);
       };
 
-      setThemeOnMediaMatch(window.matchMedia(MATCH_MEDIA_PREFERS_COLOR_SCHEME));
+      setThemeOnMediaMatch(prefersColorSchemeMatchMedia);
 
-      window
-        .matchMedia(MATCH_MEDIA_PREFERS_COLOR_SCHEME)
-        .addEventListener('change', setThemeOnMediaMatch);
+      prefersColorSchemeMatchMedia.addEventListener(
+        'change',
+        setThemeOnMediaMatch,
+      );
       return () => {
-        window
-          .matchMedia(MATCH_MEDIA_PREFERS_COLOR_SCHEME)
-          .removeEventListener('change', setThemeOnMediaMatch);
+        prefersColorSchemeMatchMedia.removeEventListener(
+          'change',
+          setThemeOnMediaMatch,
+        );
       };
     }
   });
