@@ -14,16 +14,16 @@
   } from '@/utils/theme';
 
   // VALUES
-  let theme: Theme = (() => {
+  let currentTheme: Theme = (() => {
     const localeStorageTheme = getLocalStorageTheme();
     return localeStorageTheme ? localeStorageTheme : getSystemTheme();
   })();
 
   // HANDLERS
   function toggleTheme() {
-    const newTheme: Theme = theme === 'LIGHT' ? 'DARK' : 'LIGHT';
+    const newTheme: Theme = currentTheme === 'LIGHT' ? 'DARK' : 'LIGHT';
 
-    theme = newTheme;
+    currentTheme = newTheme;
     setLocalStorageTheme(newTheme);
     setThemeStyle(newTheme);
   }
@@ -41,7 +41,7 @@
         if (getLocalStorageTheme()) return;
 
         const newTheme = event.matches ? 'DARK' : 'LIGHT';
-        theme = newTheme;
+        currentTheme = newTheme;
         setThemeStyle(newTheme);
       };
 
