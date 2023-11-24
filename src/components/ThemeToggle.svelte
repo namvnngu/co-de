@@ -10,55 +10,51 @@
     getSystemTheme,
     getLocalStorageTheme,
     setLocalStorageTheme,
-    prefersColorSchemeMatchMedia,
+    darkColorSchemeMatchMedia,
   } from '@/utils/theme';
 
   // VALUES
-  let currentTheme: Theme = (() => {
-    const localeStorageTheme = getLocalStorageTheme();
-    return localeStorageTheme ? localeStorageTheme : getSystemTheme();
-  })();
+  const initialLocalStorageTheme = getLocalStorageTheme();
+  let currentTheme: Theme = initialLocalStorageTheme
+    ? initialLocalStorageTheme
+    : getSystemTheme();
+  let mode: 'USER' | 'SYSTEM' = initialLocalStorageTheme ? 'USER' : 'SYSTEM';
 
   // HANDLERS
   function toggleTheme() {
-    const newTheme: Theme = currentTheme === 'LIGHT' ? 'DARK' : 'LIGHT';
+    if (mode !== 'USER') {
+      mode = 'USER';
+    }
 
+    const newTheme: Theme = currentTheme === 'LIGHT' ? 'DARK' : 'LIGHT';
     currentTheme = newTheme;
     setLocalStorageTheme(newTheme);
     setThemeStyle(newTheme);
   }
 
+  function setThemeOnMediaMatch(event: MediaQueryListEvent | MediaQueryList) {
+    const newTheme = event.matches ? 'DARK' : 'LIGHT';
+    currentTheme = newTheme;
+    setThemeStyle(newTheme);
+  }
+
   // LIFECYCLE
   onMount(() => {
-    const localeStorageTheme = getLocalStorageTheme();
+    setThemeStyle(currentTheme);
 
-    if (localeStorageTheme) {
-      setThemeStyle(localeStorageTheme);
-    } else {
-      const setThemeOnMediaMatch = (
-        event: MediaQueryListEvent | MediaQueryList,
-      ) => {
-        if (getLocalStorageTheme()) return;
+    if (initialLocalStorageTheme) return;
 
-        const newTheme = event.matches ? 'DARK' : 'LIGHT';
-        currentTheme = newTheme;
-        setThemeStyle(newTheme);
-      };
-
-      setThemeOnMediaMatch(prefersColorSchemeMatchMedia);
-
-      prefersColorSchemeMatchMedia.addEventListener(
-        'change',
-        setThemeOnMediaMatch,
-      );
-      return () => {
-        prefersColorSchemeMatchMedia.removeEventListener(
-          'change',
-          setThemeOnMediaMatch,
-        );
-      };
-    }
+    darkColorSchemeMatchMedia.addEventListener('change', setThemeOnMediaMatch);
+    return () => {
+      darkColorSchemeMatchMedia.removeEventListener('change', setThemeOnMediaMatch);
+    };
   });
+
+  // REACTIVE STATEMENTS
+  $: if (mode === 'USER' && !initialLocalStorageTheme) {
+    console.log('Runnn');
+    darkColorSchemeMatchMedia.removeEventListener('change', setThemeOnMediaMatch);
+  }
 </script>
 
 <button class="theme-toggle" on:click={toggleTheme}>
