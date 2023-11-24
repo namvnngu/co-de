@@ -52,7 +52,6 @@
 
   // REACTIVE STATEMENTS
   $: if (mode === 'USER' && !initialLocalStorageTheme) {
-    console.log('Runnn');
     darkColorSchemeMatchMedia.removeEventListener('change', setThemeOnMediaMatch);
   }
 </script>
