@@ -7,7 +7,7 @@ const resources: {
   [L in Language]: Resource;
 } = { en };
 
-export const resource = (() => {
+export const resource = (function () {
   const lang = navigator.language.split('-')[0] as Language;
   const { subscribe, set } = writable(resources[lang] ?? en);
 
