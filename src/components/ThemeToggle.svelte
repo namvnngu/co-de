@@ -12,19 +12,19 @@
   <span class="option light-option"><Sun /></span>
 </button>
 
-<style>
+<style lang="scss">
   .theme-toggle {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 7.6rem;
+    height: 3rem;
     border: 0.2rem solid var(--color-text);
     transition: var(--color-transition);
   }
 
   .option {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 3.8rem;
-    min-height: 3rem;
+    display: grid;
+    place-items: center;
     transition: var(--color-transition);
   }
 

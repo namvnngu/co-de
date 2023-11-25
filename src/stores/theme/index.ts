@@ -1,4 +1,4 @@
-import { getLocalStorage, setLocalStorage } from '@/utils/localStorage';
+import { getLocalStorage, setLocalStorage } from '@/utils/local-storage';
 import { writable } from 'svelte/store';
 
 const darkColorSchemeMatchMedia = window.matchMedia('(prefers-color-scheme: dark)');

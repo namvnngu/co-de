@@ -2,6 +2,7 @@ import type { Theme } from '@/stores/theme';
 
 type LocalStorage = {
   theme: Theme;
+  projectName: string;
 };
 
 export function getLocalStorage<T extends keyof LocalStorage>(

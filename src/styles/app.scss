@@ -79,6 +79,7 @@ body {
 */
 body {
   line-height: 1.5;
+  text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -148,12 +149,8 @@ a:not([class]) {
 //   }
 // }
 
-/* Reset button style */
+/* Reset button  style */
 button {
-  margin: 0;
-  padding: 0;
-  border: none;
+  all: unset;
   cursor: pointer;
-  outline: inherit;
-  background: transparent;
 }

@@ -1,5 +1,8 @@
-<script>
-  import ThemeToggle from './components/ThemeToggle.svelte';
+<script lang="ts">
+  import AppHeader from './components/AppHeader.svelte';
 </script>
 
-<ThemeToggle />
+<AppHeader />
+
+<style lang="scss">
+</style>

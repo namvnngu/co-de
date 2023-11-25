@@ -1,5 +1,7 @@
 export type Language = 'en';
 
 export type Resource = {
-  appName: string;
+  AppName: string;
+  ProjectNamePlaceholder: string;
+  YouCanStartHere: string;
 };

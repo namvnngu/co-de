@@ -1,0 +1,64 @@
+<script lang="ts">
+  import { resource } from '@/stores/resource';
+  import Logo from './Logo.svelte';
+  import ThemeToggle from './ThemeToggle.svelte';
+  import { getLocalStorage, setLocalStorage } from '@/utils/local-storage';
+
+  let projectName = getLocalStorage('projectName') ?? '';
+
+  function handleProjectNameChange(
+    event: KeyboardEvent & { currentTarget: EventTarget & HTMLInputElement },
+  ) {
+    const newProjectName = event.currentTarget.value;
+    projectName = newProjectName;
+    setLocalStorage('projectName', newProjectName);
+  }
+</script>
+
+<header class="header">
+  <Logo />
+  <input
+    type="text"
+    title={projectName}
+    value={projectName}
+    class="project-name"
+    on:keyup={handleProjectNameChange}
+    placeholder={$resource.ProjectNamePlaceholder}
+  />
+  <ThemeToggle />
+</header>
+
+<style lang="scss">
+  .header {
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 4fr 1fr;
+    gap: 1.6rem;
+  }
+
+  .project-name {
+    all: unset;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: var(--font-size-14);
+    text-align: center;
+    transition: var(--color-transition);
+    color: var(--color-text);
+
+    &::placeholder {
+      color: var(--color-text-subtle);
+    }
+
+    &:focus::placeholder {
+      color: transparent;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .project-name {
+      font-size: var(--font-size-16);
+    }
+  }
+</style>

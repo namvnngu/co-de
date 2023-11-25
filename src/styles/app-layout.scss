@@ -1,0 +1,11 @@
+#app {
+  padding: 1.2rem 1rem;
+  display: grid;
+  gap: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  #app {
+    padding: 1.6rem;
+  }
+}

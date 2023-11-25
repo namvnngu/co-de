@@ -1,5 +1,7 @@
 import type { Resource } from './interface';
 
 export const en: Resource = {
-  appName: 'CoDe',
+  AppName: 'CoDe',
+  ProjectNamePlaceholder: 'Project name...',
+  YouCanStartHere: 'You can start here...',
 };
