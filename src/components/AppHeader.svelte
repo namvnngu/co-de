@@ -31,9 +31,16 @@
 <style lang="scss">
   .header {
     display: grid;
-    place-items: center;
+    align-items: center;
     grid-template-columns: 1fr 4fr 1fr;
     gap: 1.6rem;
+
+    & > :global(*:first-child) {
+      justify-self: start;
+    }
+    & > :global(*:last-child) {
+      justify-self: end;
+    }
   }
 
   .project-name {
