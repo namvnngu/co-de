@@ -1,4 +1,4 @@
-# CoDe: A simple app to design coding problems
+# CoDe: A simple app to design a coding solution
 
 **Still under development 🚚**
 
