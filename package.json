@@ -2,6 +2,7 @@
   "name": "co-de",
   "version": "0.0.1",
   "homepage": "https://namvnngu.github.io/co-de",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
