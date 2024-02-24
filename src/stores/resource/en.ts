@@ -5,4 +5,11 @@ export const en: Resource = {
   ProjectNamePlaceholder: 'Project name...',
   YouCanStartHere: 'You can start here...',
   Constraints: 'Constraints',
+  Ideas: 'Ideas',
+  Idea: 'Idea',
+  Time: 'Time',
+  Memory: 'Memory',
+  TestCases: 'TestCases',
+  Pseudocode: 'Pseudocode',
+  Code: 'Code',
 };
