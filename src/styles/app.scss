@@ -26,11 +26,17 @@
 
   --font-line-height: 1.5;
 
+  --font-normal: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa,
+    Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro,
+    sans-serif;
+
+  --font-code: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas,
+    'DejaVu Sans Mono', monospace;
+
   color-scheme: light dark;
 
   font-size: 62.5%;
-  font-family: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari,
-    'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+  font-family: var(--font-normal);
 }
 
 @media (prefers-color-scheme: dark) {

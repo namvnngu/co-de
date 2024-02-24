@@ -9,7 +9,7 @@ export const en: Resource = {
   Idea: 'Idea',
   Time: 'Time',
   Memory: 'Memory',
-  TestCases: 'TestCases',
+  TestCases: 'Test Cases',
   Pseudocode: 'Pseudocode',
   Code: 'Code',
 };

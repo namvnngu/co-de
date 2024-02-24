@@ -1,7 +1,6 @@
-<section class="test-cases">test-cases</section>
+<script>
+  import { resource } from '@/stores/resource';
+  import TextArea from './TextArea.svelte';
+</script>
 
-<style>
-  .test-cases {
-    background: yellow;
-  }
-</style>
+<TextArea id="test-cases" title={$resource.TestCases} />

@@ -3,6 +3,7 @@
 
   export let id: string;
   export let title: string;
+  export let contentType: 'normal' | 'code' = 'normal';
 </script>
 
 <section class="text-area box">
@@ -10,7 +11,7 @@
   <textarea
     {id}
     name={id}
-    class="text-area__content"
+    class={`text-area__content ${contentType === 'code' ? 'text-area__content-code' : ''}`}
     placeholder={$resource.YouCanStartHere}
   ></textarea>
 </section>
@@ -19,7 +20,7 @@
   .text-area {
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.8rem;
     background-color: var(--color-background);
   }
 
@@ -40,6 +41,9 @@
     resize: none;
     flex: 1;
     min-height: calc(1em * var(--font-line-height) * 6);
+  }
+  .text-area__content-code {
+    font-family: var(--font-code);
   }
 
   .text-area__content::-webkit-scrollbar {

@@ -1,7 +1,10 @@
-<section class="code">code</section>
+<script>
+  import { resource } from '@/stores/resource';
+  import TextArea from './TextArea.svelte';
+</script>
 
-<style>
-  .code {
-    background: blue;
-  }
-</style>
+<TextArea
+  id="code"
+  title={`${$resource.Pseudocode} / ${$resource.Code}`}
+  contentType="code"
+/>

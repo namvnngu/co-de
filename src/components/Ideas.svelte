@@ -1,7 +1,6 @@
-<section class="ideas">ideas</section>
+<script>
+  import { resource } from '@/stores/resource';
+  import TextArea from './TextArea.svelte';
+</script>
 
-<style>
-  .ideas {
-    background: green;
-  }
-</style>
+<TextArea id="ideas" title={$resource.Ideas} />
