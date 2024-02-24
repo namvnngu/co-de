@@ -3,6 +3,7 @@
 
   export let id: string;
   export let title: string;
+  export let value = '';
   export let contentType: 'normal' | 'code' = 'normal';
 </script>
 
@@ -10,9 +11,11 @@
   <label for={id} class="text-area__title">{title}</label>
   <textarea
     {id}
+    {value}
     name={id}
-    class={`text-area__content ${contentType === 'code' ? 'text-area__content-code' : ''}`}
     placeholder={$resource.YouCanStartHere}
+    class={`text-area__content ${contentType === 'code' ? 'text-area__content-code' : ''}`}
+    on:input
   ></textarea>
 </section>
 
