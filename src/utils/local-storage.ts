@@ -3,6 +3,15 @@ import type { Theme } from '@/stores/theme';
 type LocalStorage = {
   theme: Theme;
   projectName: string;
+  code: string;
+  constraints: string;
+  testCases: string;
+  idea1: string;
+  idea1Time: string;
+  idea1Space: string;
+  idea2: string;
+  idea2Time: string;
+  idea2Space: string;
 };
 
 export function getLocalStorage<T extends keyof LocalStorage>(

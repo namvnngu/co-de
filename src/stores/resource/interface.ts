@@ -8,7 +8,7 @@ export type Resource = {
   Ideas: string;
   Idea: string;
   Time: string;
-  Memory: string;
+  Space: string;
   TestCases: string;
   Pseudocode: string;
   Code: string;

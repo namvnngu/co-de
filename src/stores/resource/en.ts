@@ -8,7 +8,7 @@ export const en: Resource = {
   Ideas: 'Ideas',
   Idea: 'Idea',
   Time: 'Time',
-  Memory: 'Memory',
+  Space: 'Space',
   TestCases: 'Test Cases',
   Pseudocode: 'Pseudocode',
   Code: 'Code',
