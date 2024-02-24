@@ -28,7 +28,8 @@
   }
 
   .text-area__title {
-    font-size: var(--font-size-14);
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-bold);
     color: var(--color-text);
   }
 
@@ -36,7 +37,7 @@
     padding: 0;
     color: var(--color-text);
     background-color: var(--color-background);
-    font-size: var(--font-size-12);
+    font-size: var(--font-size-16);
     border: none;
     overflow: auto;
     outline: none;

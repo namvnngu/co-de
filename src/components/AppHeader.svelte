@@ -47,7 +47,7 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    font-size: var(--font-size-14);
+    font-size: var(--font-size-20);
     text-align: center;
     transition: var(--color-transition);
     color: var(--color-text);
@@ -58,12 +58,6 @@
 
     &:focus::placeholder {
       color: transparent;
-    }
-  }
-
-  @media (min-width: 768px) {
-    .project-name {
-      font-size: var(--font-size-16);
     }
   }
 </style>
