@@ -53,6 +53,15 @@ body {
   transition: var(--color-transition);
 }
 
+body::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-text-subtle);
+  border-radius: 1rem;
+}
+
 /* Use a more-intuitive box-sizing model. */
 *,
 *::before,

@@ -1,7 +1,6 @@
-<section class="constraints">constraints</section>
+<script>
+  import { resource } from '@/stores/resource';
+  import TextArea from './TextArea.svelte';
+</script>
 
-<style>
-  .constraints {
-    background: red;
-  }
-</style>
+<TextArea id="constraints" title={$resource.Constraints} />

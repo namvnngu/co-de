@@ -25,20 +25,19 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(7, 10rem);
 
-      & > :global(.constraints) {
+      & > :global(*:nth-child(1)) {
         grid-column: 1 / 2;
         grid-row: 1 / 3;
       }
-
-      & > :global(.ideas) {
+      & > :global(*:nth-child(2)) {
         grid-column: 1 / 2;
         grid-row: 3 / 6;
       }
-      & > :global(.test-cases) {
+      & > :global(*:nth-child(3)) {
         grid-column: 1 / 2;
         grid-row: 6 / 8;
       }
-      & > :global(.code) {
+      & > :global(*:nth-child(4)) {
         grid-column: 2 / 3;
         grid-row: 1 / 8;
       }

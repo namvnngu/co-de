@@ -4,4 +4,5 @@ export type Resource = {
   AppName: string;
   ProjectNamePlaceholder: string;
   YouCanStartHere: string;
+  Constraints: string;
 };

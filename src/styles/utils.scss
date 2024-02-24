@@ -6,15 +6,18 @@ $sides: (
   'l': 'left',
   'r': 'right',
 );
-
 @each $space in $spaces {
   @each $prefix, $value in $sides {
     $property: if($prefix == '', '', -#{$value});
     .m#{$prefix}-#{$space} {
-      margin#{$property}: #{$space / 10}rem;
+      margin#{$property}: #{calc($space / 10)}rem;
     }
     .p#{$prefix}-#{$space} {
-      padding#{$property}: #{$space / 10}rem;
+      padding#{$property}: #{calc($space / 10)}rem;
     }
   }
+}
+
+.box {
+  padding: 0.8rem;
 }
