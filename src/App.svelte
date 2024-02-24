@@ -5,6 +5,3 @@
 
 <AppHeader />
 <AppBody />
-
-<style lang="scss">
-</style>

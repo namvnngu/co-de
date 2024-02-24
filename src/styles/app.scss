@@ -21,7 +21,7 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 
-  --color-transition: color 0.2s ease-out, background 0.2s ease-out,
+  --color-transition: color 0.2s ease-out, background-color 0.2s ease-out,
     border 0.2s ease-out;
 
   color-scheme: light dark;
@@ -52,11 +52,9 @@ body {
   background-color: var(--color-background);
   transition: var(--color-transition);
 }
-
 body::-webkit-scrollbar {
   width: 0.6rem;
 }
-
 body::-webkit-scrollbar-thumb {
   background-color: var(--color-text-subtle);
   border-radius: 1rem;

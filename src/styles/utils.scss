@@ -1,18 +1,12 @@
 $spaces: (0, 2, 4, 8, 10, 12, 14, 16, 18, 20);
-$sides: (
-  '': 'all',
-  't': 'top',
-  'b': 'bottom',
-  'l': 'left',
-  'r': 'right',
-);
+$sides: ('', 'top', 'bottom', 'left', 'right');
 @each $space in $spaces {
-  @each $prefix, $value in $sides {
-    $property: if($prefix == '', '', -#{$value});
-    .m#{$prefix}-#{$space} {
+  @each $side in $sides {
+    $property: if($side == '', '', -#{$side});
+    .margin#{$property}-#{$space} {
       margin#{$property}: #{calc($space / 10)}rem;
     }
-    .p#{$prefix}-#{$space} {
+    .padding#{$property}-#{$space} {
       padding#{$property}: #{calc($space / 10)}rem;
     }
   }
