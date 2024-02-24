@@ -39,6 +39,7 @@
     box-shadow: none;
     resize: none;
     flex: 1;
+    min-height: calc(1em * var(--font-line-height) * 6);
   }
 
   .text-area__content::-webkit-scrollbar {

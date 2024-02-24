@@ -11,6 +11,9 @@
   --color-text-subtle: var(--light, rgba(0, 0, 0, 0.3))
     var(--dark, rgba(255, 255, 255, 0.3));
 
+  --color-transition: color 0.2s ease-out, background-color 0.2s ease-out,
+    border 0.2s ease-out;
+
   --font-size-20: 2rem;
   --font-size-18: 1.8rem;
   --font-size-16: 1.6rem;
@@ -21,8 +24,7 @@
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 
-  --color-transition: color 0.2s ease-out, background-color 0.2s ease-out,
-    border 0.2s ease-out;
+  --font-line-height: 1.5;
 
   color-scheme: light dark;
 
@@ -84,7 +86,7 @@ body {
   - Improve text rendering
 */
 body {
-  line-height: 1.5;
+  line-height: var(--font-line-height);
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
 }
