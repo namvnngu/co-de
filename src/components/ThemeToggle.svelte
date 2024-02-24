@@ -8,8 +8,8 @@
   class="theme-toggle"
   on:click={() => theme.set($theme === 'DARK' ? 'LIGHT' : 'DARK')}
 >
-  <span class="option dark-option"><Moon /></span>
-  <span class="option light-option"><Sun /></span>
+  <span class="theme-toggle__option theme-toggle__dark-option"><Moon /></span>
+  <span class="theme-toggle__option theme-toggle__light-option"><Sun /></span>
 </button>
 
 <style lang="scss">
@@ -22,17 +22,17 @@
     transition: var(--color-transition);
   }
 
-  .option {
+  .theme-toggle__option {
     display: grid;
     place-items: center;
     transition: var(--color-transition);
   }
 
-  .light-option {
+  .theme-toggle__light-option {
     background-color: var(--color-background);
   }
 
-  .dark-option {
+  .theme-toggle__dark-option {
     background-color: var(--color-text);
   }
 </style>
