@@ -12,4 +12,12 @@ export type Resource = {
   TestCases: string;
   Pseudocode: string;
   Code: string;
+  ProjectDescription: string;
+  ProjectSubDescription: string[];
+  NamNguyen: string;
+  NamNguyenGithub: string;
+  HiredInTechDomain: string;
+  HiredInTechLink: string;
+  SourceCode: string;
+  ProjectSourceCodeLink: string;
 };
