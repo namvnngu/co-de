@@ -6,10 +6,8 @@
 
   let projectName = getLocalStorage('projectName') ?? '';
 
-  function handleProjectNameChange(
-    event: KeyboardEvent & { currentTarget: EventTarget & HTMLInputElement },
-  ) {
-    const newProjectName = event.currentTarget.value;
+  function handleProjectNameChange(event: Event) {
+    const newProjectName = (event.target as HTMLInputElement).value;
     projectName = newProjectName;
     setLocalStorage('projectName', newProjectName);
   }
@@ -22,7 +20,7 @@
     title={projectName}
     value={projectName}
     class="project-name"
-    on:keyup={handleProjectNameChange}
+    on:input={handleProjectNameChange}
     placeholder={$resource.ProjectNamePlaceholder}
   />
   <ThemeToggle />
