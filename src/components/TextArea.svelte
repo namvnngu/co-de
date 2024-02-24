@@ -7,7 +7,7 @@
   export let contentType: 'normal' | 'code' = 'normal';
 </script>
 
-<section class="text-area box">
+<section class="text-area">
   <label for={id} class="text-area__title">{title}</label>
   <textarea
     {id}
@@ -25,6 +25,7 @@
     flex-direction: column;
     gap: 0.8rem;
     background-color: var(--color-background);
+    padding: 0.8rem;
   }
 
   .text-area__title {

@@ -31,13 +31,17 @@
     display: grid;
     align-items: center;
     grid-template-columns: 1fr 4fr 1fr;
-    gap: 1.6rem;
+    gap: 0.8rem 1.6rem;
 
     & > :global(*:first-child) {
       justify-self: start;
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
     }
     & > :global(*:last-child) {
       justify-self: end;
+      grid-row: 1 / 2;
+      grid-column: 3 / 4;
     }
   }
 
@@ -48,9 +52,13 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     font-size: var(--font-size-20);
+    font-weight: var(--font-weight-bold);
     text-align: center;
     transition: var(--color-transition);
     color: var(--color-text);
+
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
 
     &::placeholder {
       color: var(--color-text-subtle);
@@ -58,6 +66,16 @@
 
     &:focus::placeholder {
       color: transparent;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .header {
+      grid-template-rows: 1fr auto;
+    }
+    .project-name {
+      grid-row: 2 / 3;
+      grid-column: 1 / 4;
     }
   }
 </style>

@@ -23,23 +23,23 @@
   @media (min-width: 768px) {
     .body {
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(7, 10rem);
+      grid-template-rows: repeat(9, 10rem);
 
       & > :global(*:nth-child(1)) {
         grid-column: 1 / 2;
-        grid-row: 1 / 3;
+        grid-row: 1 / 4;
       }
       & > :global(*:nth-child(2)) {
         grid-column: 1 / 2;
-        grid-row: 3 / 6;
+        grid-row: 4 / 7;
       }
       & > :global(*:nth-child(3)) {
         grid-column: 1 / 2;
-        grid-row: 6 / 8;
+        grid-row: 7 / 10;
       }
       & > :global(*:nth-child(4)) {
         grid-column: 2 / 3;
-        grid-row: 1 / 8;
+        grid-row: 1 / 10;
       }
     }
   }
