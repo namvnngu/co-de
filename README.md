@@ -35,4 +35,5 @@ pnpm build
 
 ## Contributing
 I welcome contributions from the community to improve this project. I appreciate your help!
-Feel free to adjust the content based on your project's specific needs and guidelines. Let me know if you need further assistance!
+
+Let me know if you need further assistance!
