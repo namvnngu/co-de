@@ -1,12 +1,11 @@
 # CoDe
+<img align="right" width="145" src="./.github/logo-dark.svg#gh-dark-mode-only"/></p>
+<img align="right" width="145" src="./.github/logo-light.svg#gh-light-mode-only"/></p>
 
 [![Svelte](https://img.shields.io/badge/-Svelte-FF3E00?style=for-the-badge&logo=Svelte&logoColor=white)](https://svelte.dev)
 [![Typescript](https://img.shields.io/badge/-Typescript-3178c6?style=for-the-badge&logo=TypeScript&logoColor=white)](https://www.typescriptlang.org)
 [![SCSS](https://img.shields.io/badge/-SCSS-CC6699?style=for-the-badge&logo=Sass&logoColor=white)](https://sass-lang.com)
 [![Vite](https://img.shields.io/badge/-Vite-646CFF?style=for-the-badge&logo=Vite&logoColor=white)](https://vitejs.dev)
-
-<img align="right" width="160" src="./.github/logo-dark.svg#gh-dark-mode-only"/></p>
-<img align="right" width="160" src="./.github/logo-light.svg#gh-light-mode-only"/></p>
 
 CoDe is a simple app to design a coding solution, or a design canvas that captures the process of solving coding problem. It is referenced from [hiredintech.com](https://hiredintech.com).
 
