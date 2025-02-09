@@ -1,0 +1,13 @@
+$spaces: (0, 2, 4, 8, 10, 12, 14, 16, 18, 20);
+$sides: ('', 'top', 'bottom', 'left', 'right');
+@each $space in $spaces {
+  @each $side in $sides {
+    $property: if($side == '', '', -#{$side});
+    .margin#{$property}-#{$space} {
+      margin#{$property}: #{calc($space / 10)}rem;
+    }
+    .padding#{$property}-#{$space} {
+      padding#{$property}: #{calc($space / 10)}rem;
+    }
+  }
+}
